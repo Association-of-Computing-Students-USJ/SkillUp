@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X, Calendar, MapPin, ArrowRight } from 'lucide-react';
-import hero from '../assets/hero.png'
+import hero from '../assets/Mr.Achintha.png'
 import FreeLanceImg from '../assets/Freelancing-session.jpeg'
 import './Sessions.css';
 
@@ -20,9 +20,9 @@ const Sessions = ({ setShowCreateModal }) => {
       venue: "USJ Faculty of Computing Premises",
       speaker: {
         name: "Mr. Achintha Jayaweera",
-        designation: "Founder & CEO at Freelancing Srilanka, Digital Marketing Consultant",
+        designation: "Founder Hey Creations & Hey Studios & Suvanda Naturals & Siamo, Co-Founder - Inseeks",
         profileImg: hero,
-        bio: "A pioneer in the Sri Lankan freelancing community with over a decade of experience in digital marketing and global service delivery."
+        bio: "A pioneer in the Sri Lankan freelancing community with global service delivery."
       },
       avatars: ["👨‍💻", "🚀", "💰"]
     }
