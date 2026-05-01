@@ -56,7 +56,11 @@ app.post('/api/register', async (req, res) => {
     res.status(200).json({ message: 'Registration successful and stored in Google Sheets!' });
   } catch (error) {
     console.error('Error saving to Google Sheets:', error);
-    res.status(500).json({ message: 'Failed to store registration data.', error: error.message });
+    res.status(500).json({ 
+      message: 'Failed to store registration data.', 
+      error: error.message,
+      details: error.response?.data || 'No additional details'
+    });
   }
 });
 

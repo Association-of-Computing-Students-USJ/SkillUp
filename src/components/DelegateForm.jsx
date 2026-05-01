@@ -55,7 +55,8 @@ const DelegateForm = ({ onSucccess, onCancel }) => {
         setSuccess(true);
       } else {
         const data = await response.json();
-        setError(data.message || 'Something went wrong. Please try again.');
+        setError(data.error || data.message || 'Something went wrong. Please try again.');
+        console.error('Registration Error:', data);
       }
     } catch (err) {
       setError('Failed to connect to server. Please ensure the backend is running.',err);
