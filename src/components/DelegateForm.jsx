@@ -97,7 +97,7 @@ const DelegateForm = ({ onSucccess, onCancel }) => {
         <div className="session-details">
           <p><strong>📖 Topic:</strong> Building a Professional Presence with FreeLancing</p>
           <p><strong>📅 Date:</strong> 7th May 2026</p>
-          <p><strong>⏰ Time:</strong> 7.00 PM onwards</p>
+          <p><strong>⏰ Time:</strong> 1.00 PM onwards</p>
           <p><strong>🏛️ Venue:</strong> University of Sri Jayewardenepura Premises</p>
           <p className="highlight">🎓 An e-Certificate will be provided</p>
         </div>
