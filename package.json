@@ -20,7 +20,8 @@
     "react-dom": "^19.2.5",
     "react-router-dom": "^7.14.2",
     "xlsx": "^0.18.5",
-    "googleapis": "^144.0.0"
+    "googleapis": "^144.0.0",
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

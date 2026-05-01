@@ -1,13 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import XLSX from 'xlsx';
-import path from 'path';
-import fs from 'fs';
-import { fileURLToPath } from 'url';
+import { google } from 'googleapis';
+import dotenv from 'dotenv';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+dotenv.config();
 
 const app = express();
 const PORT = 5000;
@@ -15,53 +12,51 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const EXCEL_FILE_PATH = path.join(__dirname, 'registrations.XLSX');
-
-// Initialize Excel file if it doesn't exist
-const initExcel = () => {
-  if (!fs.existsSync(EXCEL_FILE_PATH)) {
-    const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.json_to_sheet([]);
-    XLSX.utils.book_append_sheet(wb, ws, 'Registrations');
-    XLSX.writeFile(wb, EXCEL_FILE_PATH);
-    console.log('Created new Excel file:', EXCEL_FILE_PATH);
-  }
-};
-
-initExcel();
-
-app.post('/api/register', (req, res) => {
+app.post('/api/register', async (req, res) => {
   try {
-    const userData = req.body;
-    console.log('Received registration data:', userData);
+    const { fullName, email, whatsappNumber, studentRegNo, university, faculty, academicYear } = req.body;
+    console.log('Received registration data:', req.body);
 
-    // Read existing workbook
-    const workbook = XLSX.readFile(EXCEL_FILE_PATH);
-    const sheetName = workbook.SheetNames[0];
-    const worksheet = workbook.Sheets[sheetName];
+    // 1. Authenticate with Google
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+      },
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    });
 
-    // Convert sheet to JSON to append data
-    const existingData = XLSX.utils.sheet_to_json(worksheet);
-    
-    // Add timestamp
-    const newData = {
-      ...userData,
-      registrationDate: new Date().toLocaleString(),
-    };
+    const sheets = google.sheets({ version: 'v4', auth });
 
-    existingData.push(newData);
+    // 2. Prepare the data row
+    const registrationDate = new Date().toLocaleString('en-US', { timeZone: 'Asia/Colombo' });
+    const values = [
+      [
+        fullName,
+        email,
+        whatsappNumber,
+        studentRegNo,
+        university,
+        faculty,
+        academicYear,
+        registrationDate
+      ]
+    ];
 
-    // Create new worksheet with updated data
-    const newWorksheet = XLSX.utils.json_to_sheet(existingData);
-    workbook.Sheets[sheetName] = newWorksheet;
+    // 3. Append to the sheet
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range: 'Sheet1!A1', 
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values,
+      },
+    });
 
-    // Write back to file
-    XLSX.writeFile(workbook, EXCEL_FILE_PATH);
-
-    res.status(200).json({ message: 'Registration successful and stored in Excel.' });
+    res.status(200).json({ message: 'Registration successful and stored in Google Sheets!' });
   } catch (error) {
-    console.error('Error saving to Excel:', error);
-    res.status(500).json({ message: 'Failed to store registration data.' });
+    console.error('Error saving to Google Sheets:', error);
+    res.status(500).json({ message: 'Failed to store registration data.', error: error.message });
   }
 });
 
