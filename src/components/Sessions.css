@@ -342,34 +342,48 @@
   
   .detail-image-side {
     order: -1;
-  }
-
-  .session-img-box img {
-    width: 100%;
-  }
-
-  .detail-hero-img {
-    object-fit: contain;
-  }
-
-  .detail-hero-img {
     position: relative;
-    top: -80px;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+
+  .detail-hero-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    margin-bottom: 0;
   }
 
   .speaker-card {
-    position: absolute;
-    bottom: 0%;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    margin-top: -20px; /* Slight overlap effect without breaking layout */
+    z-index: 2;
+    background: white; /* Ensure visibility over image if it overlaps slightly */
+    padding: 12px;
+    box-shadow: var(--shadow-md);
   }
 
   .profile-pic {
-    width: 60px;
-    margin-left: 30px;
+    width: 50px;
+    margin-left: 0;
   }
 
   .speaker-info {
-    margin-left: 40px;
+    margin-left: 0;
   }
-  
+
+  .speaker-info h5 {
+    font-size: 16px;
+  }
+
+  .speaker-info p {
+    font-size: 13px;
+  }
 
 }

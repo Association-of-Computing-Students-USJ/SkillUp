@@ -223,9 +223,24 @@
   }
 
   .floating-card {
-    right: 5px;
-    bottom: 310px;
-    padding: 5px;
-    max-width: 98%;
+    right: 15px;
+    bottom: 20px;
+    padding: 10px 15px;
+    max-width: 200px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .card-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .card-info h4 {
+    font-size: 14px;
+  }
+
+  .card-info p {
+    font-size: 11px;
   }
 }
