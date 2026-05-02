@@ -359,11 +359,11 @@
 
   .speaker-card {
     position: absolute;
-    bottom: 270px;
+    bottom: 0%;
   }
 
   .profile-pic {
-    width: 90px;
+    width: 60px;
     margin-left: 30px;
   }
 

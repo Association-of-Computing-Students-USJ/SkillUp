@@ -28,7 +28,7 @@ const Hero = () => {
               <div className="card-icon">🎓</div>
               <div className="card-info">
                 <h4>Academic Excellence</h4>
-                <p>Accredited by the modern education standards for lifelong learners.</p>
+                <p>Let's make our skills up with SkillUp</p>
               </div>
             </div>
           </div>
