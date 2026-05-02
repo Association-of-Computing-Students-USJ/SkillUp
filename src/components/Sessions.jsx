@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { X, Calendar, MapPin, ArrowRight } from 'lucide-react';
-import hero from '../assets/Mr.Achintha.png'
-import FreeLanceImg from '../assets/Freelancing-session.jpeg'
+import hero from '../assets/Mr.Achintha.webp'
+import FreeLanceImg from '../assets/Freelancing-session.webp'
 import './Sessions.css';
 
 const Sessions = ({ setShowCreateModal }) => {

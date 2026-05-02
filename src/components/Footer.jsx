@@ -1,5 +1,5 @@
 import './Footer.css';
-import logo from '../assets/skillup-logo.png'
+import logo from '../assets/skillup-logo.webp'
 
 const Footer = () => {
   return (

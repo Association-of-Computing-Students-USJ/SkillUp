@@ -1,4 +1,4 @@
-import heroImg from '../assets/SkillUp.jpeg';
+import heroImg from '../assets/SkillUp.webp';
 import './Hero.css';
 
 const Hero = () => {

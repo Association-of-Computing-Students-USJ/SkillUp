@@ -144,6 +144,8 @@
 @media (max-width: 768px) {
   .journey-section {
     padding: 60px 0;
+    width: 90%;
+    margin: auto;
   }
 
   .section-header h2 {
@@ -153,6 +155,8 @@
   .journey-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    width: 90%;
+    margin: auto;
   }
 
   .journey-card {
@@ -162,6 +166,7 @@
 
   .card-overlay {
     padding: 20px;
+    bottom: -12px;
   }
 
   .card-overlay h3 {

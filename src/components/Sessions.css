@@ -71,7 +71,7 @@
 .session-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .status-tag {
@@ -179,6 +179,8 @@
 @media (max-width: 768px) {
   .sessions-section {
     padding: 60px 0;
+    width: 90%;
+    margin: auto;
   }
 
   .sessions-header {
@@ -255,12 +257,12 @@
 }
 
 .speaker-info h5 {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 2px;
 }
 
 .speaker-info p {
-  font-size: 11px;
+  font-size: 15px;
   margin-bottom: 0;
 }
 
@@ -311,8 +313,10 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 100%;
+  width: 90%;
   transition: all 0.3s ease;
+  border-radius: 30px;
+  margin: auto;
 }
 
 .btn-register-action:hover {
@@ -326,6 +330,11 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
+  .modal-content {
+    width: 90%;
+    margin: auto;
+  }
   
   .detail-info-side h3 {
     font-size: 22px;
@@ -336,6 +345,31 @@
   }
 
   .session-img-box img {
-  width: 100%;
-}
+    width: 100%;
+  }
+
+  .detail-hero-img {
+    object-fit: contain;
+  }
+
+  .detail-hero-img {
+    position: relative;
+    top: -80px;
+  }
+
+  .speaker-card {
+    position: absolute;
+    bottom: 270px;
+  }
+
+  .profile-pic {
+    width: 90px;
+    margin-left: 30px;
+  }
+
+  .speaker-info {
+    margin-left: 40px;
+  }
+  
+
 }

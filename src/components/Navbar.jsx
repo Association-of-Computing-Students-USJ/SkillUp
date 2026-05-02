@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { TvIcon, X } from 'lucide-react'
-import skillupLogo from "../assets/skillup-logo.png"
+import skillupLogo from "../assets/skillup-logo.webp"
 import DelegateForm from './DelegateForm';
 import './Navbar.css';
 

@@ -1,6 +1,6 @@
 import './Journey.css';
-import  CanvaImage  from '../assets/Canva-session.jpg'
-import LinkedInImage from '../assets/LinkedIn-session.jpeg'
+import  CanvaImage  from '../assets/Canva-session.webp'
+import LinkedInImage from '../assets/LinkedIn-session.webp'
 
 const Journey = () => {
   const journeys = [

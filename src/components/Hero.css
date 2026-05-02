@@ -186,6 +186,7 @@
 @media (max-width: 640px) {
   .hero-section {
     padding: 60px 0;
+        width: 90%;
   }
 
   .hero-text h1 {
@@ -205,19 +206,21 @@
 
   .btn-primary,
   .btn-outline {
-    width: 100%;
+    width: 40%;
     justify-content: center;
+    margin: auto;
     padding: 14px 24px;
   }
 
   .hero-image {
-    height: 350px;
+    height: 480px;
     border-radius: 24px;
+
   }
 
   .floating-card {
     right: 10px;
-    bottom: 20px;
+    bottom: 70px;
     padding: 12px;
     max-width: 260px;
   }
