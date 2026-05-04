@@ -92,6 +92,7 @@
 }
 
 .input-wrapper input,
+.input-wrapper textarea,
 .input-wrapper select {
   width: 100%;
   padding: 12px 12px 12px 40px;

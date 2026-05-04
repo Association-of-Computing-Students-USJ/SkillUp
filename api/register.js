@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { fullName, email, whatsappNumber, studentRegNo, university, faculty, academicYear } = req.body;
+    const { fullName, email, whatsappNumber, learnings, futureComments, faculty, academicYear } = req.body;
 
     // 1. Authenticate with Google
     const auth = new google.auth.GoogleAuth({
@@ -26,8 +26,8 @@ export default async function handler(req, res) {
         fullName,
         email,
         whatsappNumber,
-        studentRegNo,
-        university,
+        learnings,
+        futureComments,
         faculty,
         academicYear,
         registrationDate
@@ -45,11 +45,11 @@ export default async function handler(req, res) {
       },
     });
 
-    return res.status(200).json({ message: 'Registration successful!' });
+    return res.status(200).json({ message: 'Attendance Marked successfully!' });
   } catch (error) {
     console.error('Google Sheets Error:', error);
     return res.status(500).json({ 
-      message: 'Failed to save registration.', 
+      message: 'Failed to mark Attendance.', 
       error: error.message 
     });
   }
