@@ -38,14 +38,14 @@ const Navbar = ({ showCreateModal, setShowCreateModal }) => {
               setShowCreateModal(true);
               setIsMenuOpen(false);
             }}>
-            <TvIcon size={16} />Register
+            <TvIcon size={16} />Attendance
           </button>
         </div>
 
         <div className="nav-actions">
           <button className="btn-register desktop-only"
             onClick={() => setShowCreateModal(true)}>
-            <TvIcon size={16} />Register
+            <TvIcon size={16} />Mark the Attendance
           </button>
           
           <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
@@ -59,8 +59,8 @@ const Navbar = ({ showCreateModal, setShowCreateModal }) => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <div>
-                <h2>Registration</h2>
-                <p>Register for SkillUp and empower your potential</p>
+                <h2>Mark the Attendance</h2>
+                <p>Mark your details correcly for the e-certificate</p>
               </div>
               <button className="btn-close" onClick={() => setShowCreateModal(false)}>
                 <X size={20} />

@@ -168,7 +168,7 @@ const Sessions = ({ setShowCreateModal }) => {
                         setShowCreateModal(true);
                       }}
                     >
-                      Register Now <ArrowRight size={18} />
+                      Mark Your Attendance <ArrowRight size={18} />
                     </button>
                   </div>
                 </div>

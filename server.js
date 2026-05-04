@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.post('/api/register', async (req, res) => {
   try {
-    const { fullName, email, whatsappNumber, studentRegNo, university, faculty, academicYear } = req.body;
+    const { fullName, email, whatsappNumber, futureComments, learnings, faculty, academicYear } = req.body;
     console.log('Received registration data:', req.body);
 
     // 1. Authenticate with Google
@@ -35,10 +35,9 @@ app.post('/api/register', async (req, res) => {
         fullName,
         email,
         whatsappNumber,
-        studentRegNo,
-        university,
         faculty,
-        academicYear,
+        learnings,
+        futureComments,
         registrationDate
       ]
     ];
