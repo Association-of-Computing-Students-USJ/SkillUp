@@ -44,7 +44,7 @@ const Navbar = ({ showCreateModal, setShowCreateModal }) => {
 
         <div className="nav-actions">
           <button className="btn-register desktop-only"
-            onClick={() => setShowCreateModal(true)}>
+            onClick={() => setShowCreateModal(false)}>
             <TvIcon size={16} />Mark the Attendance
           </button>
           

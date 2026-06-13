@@ -14,7 +14,8 @@ const CTA = ({ setShowCreateModal }) => {
 
       if (distance < 0) {
         clearInterval(interval);
-        setTimeLeft('ATTENDANCE FORM CLOSED');
+        // setTimeLeft('REGISTRATION NOT AVAILABLE');
+        setTimeLeft('REGISTRATION NOT AVAILABLE');
         return;
       }
 
@@ -38,7 +39,7 @@ const CTA = ({ setShowCreateModal }) => {
             Attendance form for the Freelancing session is now open. Secure your spot and unlock your limitless potential.
           </p>
           <div className="cta-btns">
-            <button className="btn-white" onClick={() => setShowCreateModal(true)}>
+            <button className="btn-white" onClick={() => setShowCreateModal(false)}>
               Mark Your Attendance ↗
             </button>
             {/* <button className="btn-ghost" onClick={() => window.open(driveUrl, '_blank')}>
@@ -48,7 +49,8 @@ const CTA = ({ setShowCreateModal }) => {
               Download E certificates 📥
             </button>
           </div>
-          <span className="early-bird">ATTENDANCE FORM CLOSED IN {timeLeft}</span>
+          {/* <span className="early-bird">ATTENDANCE FORM CLOSED IN {timeLeft}</span> */}
+          <span className="early-bird">{timeLeft}</span>
         </div>
       </div>
     </section>

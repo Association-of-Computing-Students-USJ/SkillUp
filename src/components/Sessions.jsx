@@ -3,6 +3,7 @@ import { X, Calendar, MapPin, ArrowRight } from 'lucide-react';
 import hero from '../assets/Mr.Achintha.webp'
 import FreeLanceImg from '../assets/Freelancing-session.webp'
 import './Sessions.css';
+import CVImg from '../assets/CV-session.png';
 
 const Sessions = ({ setShowCreateModal }) => {
   const [selectedSession, setSelectedSession] = useState(null);
@@ -10,9 +11,9 @@ const Sessions = ({ setShowCreateModal }) => {
   const sessions = [
     {
       id: 3,
-      status: "ENROLLING",
-      date: "MAY 07, 2026",
-      time: "1.00 PM onwards",
+      status: "POSTPONED",
+      date: "Will be announced",
+      time: "Will be announced",
       title: "Building a Professional Presence with Freelancing",
       desc: "Level up your career with SkillUp’s Freelancing session. Learn how to navigate the global market and build a sustainable income.",
       longDesc: "This session is designed for students and professionals looking to break into the world of freelancing. We will cover platform selection, profile optimization, client acquisition, and financial management for freelancers. Whether you are a designer, developer, or writer, this session will provide you with the tools to succeed.",
@@ -25,23 +26,23 @@ const Sessions = ({ setShowCreateModal }) => {
         bio: "A pioneer in the Sri Lankan freelancing community with global service delivery."
       },
       avatars: ["👨‍💻", "🚀", "💰"]
-    }
-   /* {
-      id: 1,
-      status: "WAITLIST",
-      date: "OCT 15 - NOV 20",
-      title: "Modern UI/UX Systems",
-      desc: "Master Figma, design tokens, and accessibility standards in this immersive 6-week studio session.",
-      longDesc: "Dive deep into the world of user interface and experience design. From typography and color theory to advanced prototyping and handoff, this session covers the entire design lifecycle.",
-      img: "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=800&q=80",
-      venue: "Online via Zoom",
-      speaker: {
-        name: "Jane Doe",
-        designation: "Lead UI/UX Designer",
-      },
-      avatars: ["👨‍💻", "👩‍🎨", "🧑‍🚀"]
     },
     {
+      id: 1,
+      status: "WAITLIST",
+      date: "JUNE 18 - JUNE 24",
+      title: "CV WORKSHOP",
+      desc: "Build a standout CV with guidance from industry experts in our SkillUp CV Writing Session. Learn the key techniques to make a strong first impression on recruiters.",
+      longDesc:"A well-crafted CV is your first step toward securing internships, jobs, and career opportunities. Join our SkillUp CV Writing Session to learn how to create a professional CV that effectively showcases your skills, experiences, and achievements. Participants will gain practical insights into CV structure, formatting, and industry best practices. The session will also cover common mistakes to avoid and tips for tailoring your CV to different opportunities. Whether you're a student or a recent graduate, this session will help you build a CV that leaves a lasting impression on recruiters.",
+      img: CVImg,
+      venue: "Online via Zoom",
+      speaker: {
+        name: "Will be announced",
+        designation: "Will be announced",
+      },
+      avatars: ["👨‍💻", "👩‍🎨", "🧑‍🚀"]
+    }
+   /* {
       id: 2,
       status: "WAITLIST",
       date: "NOV 05 - DEC 15",
@@ -165,7 +166,7 @@ const Sessions = ({ setShowCreateModal }) => {
                       className="btn-register-action"
                       onClick={() => {
                         closeDetails();
-                        setShowCreateModal(true);
+                        setShowCreateModal(false);
                       }}
                     >
                       Mark Your Attendance <ArrowRight size={18} />
