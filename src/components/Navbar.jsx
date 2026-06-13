@@ -35,8 +35,8 @@ const Navbar = ({ showCreateModal, setShowCreateModal }) => {
           </ul>
           <button className="btn-register mobile-only"
             onClick={() => {
-              setShowCreateModal(true);
-              setIsMenuOpen(false);
+              setShowCreateModal(false);
+              setIsMenuOpen(true);
             }}>
             <TvIcon size={16} />Attendance
           </button>
