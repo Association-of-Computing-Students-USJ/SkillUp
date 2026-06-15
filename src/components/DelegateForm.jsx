@@ -69,10 +69,10 @@ const DelegateForm = ({ onSucccess, onCancel }) => {
         <div className="success-icon">✓</div>
         <h3>Your Attendance has been marked successfully</h3>
         <div className="success-content">
-          <h4>SkillUp - Freelancing Session</h4>
+          <h4>SkillUp - CV Workshop Session</h4>
 
           <div className="whatsapp-box">
-            <p>📌💼Your attendance has been recorded for the Freelancing Workshop </p>
+            <p>📌💼Your attendance has been recorded for the CV Workshop </p>
             <p>📌📱Your e-certificate will be sent to your provided email 💻</p>
             <p> 🔖Stay connected with ACS, USJ for more exciting SkillUp sessions!👾💜 </p>
             <p>#SkillUp #ACS #USJ</p>
@@ -89,13 +89,13 @@ const DelegateForm = ({ onSucccess, onCancel }) => {
     <div className="form-container">
       <div className="session-info-header">
         <h2>SkillUP - Attendance</h2>
-        <div className="session-badge">SkillUp - Freelancing</div>
-        <p className="session-promo">🚀 Level up your career with SkillUp’s Freelancing session</p>
+        <div className="session-badge">SkillUp - CV Workshop</div>
+        <p className="session-promo">🚀 Level up your career with SkillUp’s CV Workshop</p>
         <div className="session-details">
-          <p><strong>📖 Topic:</strong> Building a Professional Presence with FreeLancing</p>
-          <p><strong>📅 Date:</strong> 7th May 2026</p>
-          <p><strong>⏰ Time:</strong> 1.00 PM onwards</p>
-          <p><strong>🏛️ Venue:</strong> University of Sri Jayewardenepura Premises</p>
+          <p><strong>📖 Topic:</strong>Follow along to create a best CV</p>
+          <p><strong>📅 Date:</strong> 20th May 2026</p>
+          <p><strong>⏰ Time:</strong> 7.00 PM onwards</p>
+          <p><strong>🏛️ Venue:</strong> Via Online</p>
         </div>
       </div>
 

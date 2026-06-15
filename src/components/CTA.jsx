@@ -6,7 +6,7 @@ const CTA = ({ setShowCreateModal }) => {
   const driveUrl = "https://drive.google.com/drive/folders/YOUR_FOLDER_ID"; // Placeholder for folder path
 
   useEffect(() => {
-    const targetDate = new Date('2026-05-07T15:30:00').getTime();
+    const targetDate = new Date('2026-06-20T19:00:00').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -15,7 +15,7 @@ const CTA = ({ setShowCreateModal }) => {
       if (distance < 0) {
         clearInterval(interval);
         // setTimeLeft('REGISTRATION NOT AVAILABLE');
-        setTimeLeft('REGISTRATION NOT AVAILABLE');
+        setTimeLeft('ATTENDANCE FORM CLOSED');
         return;
       }
 
@@ -36,10 +36,10 @@ const CTA = ({ setShowCreateModal }) => {
         <div className="cta-content">
           <h2>Start Your Journey Today</h2>
           <p>
-            Attendance form for the Freelancing session is now open. Secure your spot and unlock your limitless potential.
+            Attendance form for the CV Writing session is now open. Secure your spot and unlock your limitless potential.
           </p>
           <div className="cta-btns">
-            <button className="btn-white" onClick={() => setShowCreateModal(false)}>
+            <button className="btn-white" onClick={() => setShowCreateModal(true)}>
               Mark Your Attendance ↗
             </button>
             {/* <button className="btn-ghost" onClick={() => window.open(driveUrl, '_blank')}>
@@ -49,8 +49,8 @@ const CTA = ({ setShowCreateModal }) => {
               Download E certificates 📥
             </button>
           </div>
-          {/* <span className="early-bird">ATTENDANCE FORM CLOSED IN {timeLeft}</span> */}
-          <span className="early-bird">{timeLeft}</span>
+           <span className="early-bird">ATTENDANCE FORM CLOSED IN {timeLeft}</span>
+          
         </div>
       </div>
     </section>

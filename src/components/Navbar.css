@@ -58,7 +58,7 @@
   border-radius: 8px;
   font-weight: 600;
   font-size: 15px;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 .btn-register:hover {

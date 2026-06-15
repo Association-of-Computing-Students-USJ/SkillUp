@@ -1,46 +1,46 @@
 import { useState } from 'react';
 import { X, Calendar, MapPin, ArrowRight } from 'lucide-react';
-import hero from '../assets/Mr.Achintha.webp'
-import FreeLanceImg from '../assets/Freelancing-session.webp'
+// import hero from '../assets/Mr.Achintha.webp'
+// import FreeLanceImg from '../assets/Freelancing-session.webp'
 import './Sessions.css';
-import CVImg from '../assets/CV-session.png';
+import CVImg from '../assets/CV-session.webp';
 
 const Sessions = ({ setShowCreateModal }) => {
   const [selectedSession, setSelectedSession] = useState(null);
 
   const sessions = [
-    {
-      id: 3,
-      status: "POSTPONED",
-      date: "Will be announced",
-      time: "Will be announced",
-      title: "Building a Professional Presence with Freelancing",
-      desc: "Level up your career with SkillUp’s Freelancing session. Learn how to navigate the global market and build a sustainable income.",
-      longDesc: "This session is designed for students and professionals looking to break into the world of freelancing. We will cover platform selection, profile optimization, client acquisition, and financial management for freelancers. Whether you are a designer, developer, or writer, this session will provide you with the tools to succeed.",
-      img: FreeLanceImg,
-      venue: "USJ Faculty of Computing Premises",
-      speaker: {
-        name: "Mr. Achintha Jayaweera",
-        designation: "Founder Hey Creations & Hey Studios & Suvanda Naturals & Siamo, Co-Founder - Inseeks",
-        profileImg: hero,
-        bio: "A pioneer in the Sri Lankan freelancing community with global service delivery."
-      },
-      avatars: ["👨‍💻", "🚀", "💰"]
-    },
+    // {
+    //   id: 3,
+    //   status: "POSTPONED",
+    //   date: "Will be announced",
+    //   time: "Will be announced",
+    //   title: "Building a Professional Presence with Freelancing",
+    //   desc: "Level up your career with SkillUp’s Freelancing session. Learn how to navigate the global market and build a sustainable income.",
+    //   longDesc: "This session is designed for students and professionals looking to break into the world of freelancing. We will cover platform selection, profile optimization, client acquisition, and financial management for freelancers. Whether you are a designer, developer, or writer, this session will provide you with the tools to succeed.",
+    //   img: FreeLanceImg,
+    //   venue: "USJ Faculty of Computing Premises",
+    //   speaker: {
+    //     name: "Mr. Achintha Jayaweera",
+    //     designation: "Founder Hey Creations & Hey Studios & Suvanda Naturals & Siamo, Co-Founder - Inseeks",
+    //     profileImg: hero,
+    //     bio: "A pioneer in the Sri Lankan freelancing community with global service delivery."
+    //   },
+    //   avatars: ["👨‍💻", "🚀", "💰"]
+    // },
     {
       id: 1,
-      status: "WAITLIST",
-      date: "JUNE 18 - JUNE 24",
+      status: "ENROLLING",
+      date: "JUNE 20",
       title: "CV WORKSHOP",
       desc: "Build a standout CV with guidance from industry experts in our SkillUp CV Writing Session. Learn the key techniques to make a strong first impression on recruiters.",
       longDesc:"A well-crafted CV is your first step toward securing internships, jobs, and career opportunities. Join our SkillUp CV Writing Session to learn how to create a professional CV that effectively showcases your skills, experiences, and achievements. Participants will gain practical insights into CV structure, formatting, and industry best practices. The session will also cover common mistakes to avoid and tips for tailoring your CV to different opportunities. Whether you're a student or a recent graduate, this session will help you build a CV that leaves a lasting impression on recruiters.",
       img: CVImg,
       venue: "Online via Zoom",
       speaker: {
-        name: "Will be announced",
-        designation: "Will be announced",
+        name: "Ms. Dinusha Wijayagunarathna",
+        designation: "Manager- HR and Talent Development, Hutch Telecommunications Pvt Ltd",
       },
-      avatars: ["👨‍💻", "👩‍🎨", "🧑‍🚀"]
+      avatars: ["👩‍🎨", "🧑‍🚀"]
     }
    /* {
       id: 2,
@@ -166,7 +166,7 @@ const Sessions = ({ setShowCreateModal }) => {
                       className="btn-register-action"
                       onClick={() => {
                         closeDetails();
-                        setShowCreateModal(false);
+                        setShowCreateModal(true);
                       }}
                     >
                       Mark Your Attendance <ArrowRight size={18} />
