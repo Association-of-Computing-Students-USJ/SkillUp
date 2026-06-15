@@ -35,8 +35,8 @@ const Navbar = ({ showCreateModal, setShowCreateModal }) => {
           </ul>
           <button className="btn-register mobile-only"
             onClick={() => {
-              setShowCreateModal(false);
-              setIsMenuOpen(true);
+              setShowCreateModal(true);
+              setIsMenuOpen(false);
             }}>
             <TvIcon size={16} />Attendance
           </button>
@@ -44,7 +44,7 @@ const Navbar = ({ showCreateModal, setShowCreateModal }) => {
 
         <div className="nav-actions">
           <button className="btn-register desktop-only"
-            onClick={() => setShowCreateModal(false)}>
+            onClick={() => setShowCreateModal(true)}>
             <TvIcon size={16} />Mark the Attendance
           </button>
           
